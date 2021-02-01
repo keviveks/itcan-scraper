@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    title= 'ItCan Coupon Scraper'
+    style(type='text/css').
+      table, th, td {
+        border: 1px solid black
+      }
+  body
+    h1 ItCan Coupon Scraper
+    #container.col
+      table.table
+        tr
+          th Coupon Id
+          th Code
+          th Title
+          th Description
+          th Brand
+          th Date Created
+        tbody
+          each coupon in coupons
+            tr
+              td #{coupon.couponId}
+              td #{coupon.code}
+              td #{coupon.title}
+              td #{coupon.description}
+              td #{coupon.brand}
+              td #{coupon.dateCreated}
+
